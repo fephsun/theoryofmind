@@ -7,6 +7,8 @@ You need Python 2.7 to run this code.  No other dependencies are needed.  Execut
 
 ## Interpreting the results
 You should see a graph that looks like this: 
-!(./outPlot.png)
+![alt text](./outPlot.png)
 
 The x-axis represents the value the agent assigns to color 1.  The value of color 2 is one minus the value of color 1.  The y-axis shows the log-likelihood of that value assignment, given the agent's actions.  In this case, the agent is likely to prefer color 1 at least a little bit over color 2.
+
+The demo code (`runner.py` or `runFromData.py`) is exactly that: it is designed to demonstrate the use of `momdp.py` to do theory of mind inference.  To collect real data on each stimulus, you should look at the `getStatistics` function, which provides a variety of useful statistics on each posterior distribution.  To process the complete set of stimuli, we used a cluster of 100 machines, running `momdp.testGrid` in parallel.
