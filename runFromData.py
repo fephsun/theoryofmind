@@ -19,7 +19,7 @@ for line in range(len(grid)):
 discount = 0.999
 beta = 100
 moveCost = 0.03
-nSamples = 11
+nSamples = 101
 mymomdp = momdp.GridMOMDP(grid, nPick, discount, beta, moveCost)
 out = mymomdp.testGrid(readablePath, nSamples, range(nSamples))
 momdp.simplexPlot(out)
